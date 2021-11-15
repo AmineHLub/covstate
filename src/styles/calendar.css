@@ -1,0 +1,17 @@
+.calendar-container {
+  position: fixed;
+  height: 90vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.selection {
+  justify-content: space-around;
+  width: 15%;
+}
+
+.today-container {
+  margin-top: 20px;
+}
