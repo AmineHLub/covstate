@@ -1,9 +1,10 @@
 .lower-container {
+  z-index: -1;
   position: absolute;
   top: 205px;
   left: 0;
   width: 100%;
-  background-color: red;
+  background-color: rgb(163, 40, 40);
 }
 
 .stat-tag {
@@ -23,10 +24,16 @@
   width: 50%;
   justify-content: space-between;
   align-items: flex-end;
+  cursor: pointer;
+  background-color: rgb(177, 48, 48);
 }
 
 .cont-container:nth-child(2n+1) {
   background-color: rgb(184, 29, 29);
+}
+
+.cont-container:hover {
+  filter: sepia(10);
 }
 
 .cont-container > img {
