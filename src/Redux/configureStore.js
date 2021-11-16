@@ -4,7 +4,7 @@ import Logger from 'redux-logger';
 import apiState from './State/apiState';
 import timeReducer from './State/timeState';
 
-const reducer = combineReducers({ timeReducer });
+const reducer = combineReducers({ timeReducer, apiState });
 
 const store = createStore(
   reducer,

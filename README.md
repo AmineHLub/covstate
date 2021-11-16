@@ -68,6 +68,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+Adobe Sparks / world shapes
+
 - This project belongs to [Microverse](https://microverse.org/).
 
 ## 📝 License
