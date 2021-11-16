@@ -15,15 +15,9 @@ const Main = () => {
           <ViewMain />
           <SelectorView />
         </>
-      ) : <Continent />}
+      ) : <Continent continent={selectedContinent} />}
     </>
   );
 };
-
-const wow = (
-  <div>
-    <img src="https://raw.githubusercontent.com/djaiss/mapsicon/master/europe/gb/128.png" alt="shape" />
-  </div>
-);
 
 export default Main;

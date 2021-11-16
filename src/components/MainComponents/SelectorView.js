@@ -35,9 +35,9 @@ const SelectorView = () => {
           <img src={southAmerica} alt="continent-shape" />
           <p className="cont-name">South America</p>
         </div>
-        <div className="cont-container" role="presentation" onClick={() => dispatch(setContinent({ selected: 'australia' }))}>
+        <div className="cont-container" role="presentation" onClick={() => dispatch(setContinent({ selected: 'oceania' }))}>
           <img src={australia} alt="continent-shape" />
-          <p className="cont-name">Australia</p>
+          <p className="cont-name">Oceania</p>
         </div>
       </div>
     </div>
