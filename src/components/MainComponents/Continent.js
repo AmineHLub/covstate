@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import worldMap from '../../assets/worldmap.png';
 import '../../styles/main-style/viewmain.css';
 import '../../styles/main-style/selectormain.css';
 import asia from '../../assets/asia.png';
@@ -9,7 +9,7 @@ import australia from '../../assets/australia.png';
 import northAmerica from '../../assets/north-america.png';
 import southAmerica from '../../assets/south-america.png';
 
-const Continent = (selectedContinent) => {
+const Continent = ({ selectedContinent, navSearch }) => {
   const countries = {
     africa: {
       ZW: 'Zimbabwe',
@@ -197,34 +197,34 @@ const Continent = (selectedContinent) => {
     },
 
   };
-  const { continent } = selectedContinent;
   let displayImg;
   let stringName;
-  if (continent.selected === 'asia') {
+  if (selectedContinent.selected === 'asia') {
     displayImg = asia;
     stringName = 'Asia';
   }
-  if (continent.selected === 'europe') {
+  if (selectedContinent.selected === 'europe') {
     displayImg = europe;
     stringName = 'Europe';
   }
-  if (continent.selected === 'africa') {
+  if (selectedContinent.selected === 'africa') {
     displayImg = africa;
     stringName = 'Africa';
   }
-  if (continent.selected === 'oceania') {
+  if (selectedContinent.selected === 'oceania') {
     displayImg = australia;
     stringName = 'Oceania';
   }
-  if (continent.selected === 'samerica') {
+  if (selectedContinent.selected === 'samerica') {
     displayImg = southAmerica;
     stringName = 'South America';
   }
-  if (continent.selected === 'namerica') {
+  if (selectedContinent.selected === 'namerica') {
     displayImg = northAmerica;
     stringName = 'North America';
   }
-  const numberOfCountriesNow = Object.keys(countries[continent.selected]);
+  const numberOfCountriesNow2 = Object.values(countries[selectedContinent.selected]);
+  const numberOfCountriesNow = Object.keys(countries[selectedContinent.selected]);
   return (
     <>
       <div className="upper-container">
@@ -236,11 +236,20 @@ const Continent = (selectedContinent) => {
       <div className="lower-container">
         <div className="stat-tag">countries</div>
         <div className="selector-main-container d-flex">
-          { numberOfCountriesNow.map((el) => {
+          { numberOfCountriesNow2.filter((searched) => {
+            if (navSearch === '') { return searched; }
+            if (searched.toLowerCase().includes(navSearch.toLowerCase())) { return searched; }
+            return null;
+          }).map((el) => {
+            const key = numberOfCountriesNow
+              .find((key) => countries[selectedContinent.selected][key] === el);
             return (
               <div key={el} className="cont-container" role="presentation">
-                <img src={`https://raw.githubusercontent.com/djaiss/mapsicon/master/all/${el.toLowerCase()}/128.png`} alt="continent-shape" />
-                <p className="cont-name">{countries[continent.selected][el]}</p>
+                <img
+                  src={`https://raw.githubusercontent.com/djaiss/mapsicon/master/all/${key.toLowerCase()}/128.png`}
+                  alt="selectedContinent-shape"
+                />
+                <p className="cont-name">{el}</p>
               </div>
             );
           })}

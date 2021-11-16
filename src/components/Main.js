@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Navbar from './MainComponents/Navbar';
 import ViewMain from './MainComponents/ViewMain';
@@ -7,15 +7,16 @@ import Continent from './MainComponents/Continent';
 
 const Main = () => {
   const selectedContinent = useSelector((state) => state.continentReducer);
+  const [navSearch, setNavSearch] = useState('');
   return (
     <>
-      <Navbar />
+      <Navbar setNavSearch={setNavSearch} />
       {!selectedContinent ? (
         <>
           <ViewMain />
           <SelectorView />
         </>
-      ) : <Continent continent={selectedContinent} />}
+      ) : <Continent selectedContinent={selectedContinent} navSearch={navSearch} />}
     </>
   );
 };

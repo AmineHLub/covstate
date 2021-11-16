@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { resetTime } from '../../Redux/State/timeState';
 import { setContinent } from '../../Redux/State/continentSelection';
 import '../../styles/main-style/navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ setNavSearch }) => {
   const selectedContinent = useSelector((state) => state.continentReducer);
   const dispatch = useDispatch();
   return (
@@ -28,7 +29,7 @@ const Navbar = () => {
           {' '}
         </div>
         <div className="search-bar">
-          <input />
+          <input onChange={(e) => setNavSearch(e.target.value)} />
         </div>
       </div>
     </nav>
