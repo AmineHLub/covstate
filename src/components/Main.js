@@ -25,19 +25,17 @@ const Main = () => {
         selectedCountry={selectedCountry}
       />
       <Switch>
-
-        {!selectedContinent ? (
-          <>
-            <ViewMain />
-            <SelectorView />
-          </>
-        ) : (
-          <Route exact path="/">
-            {' '}
+        <Route exact path="/">
+          {!selectedContinent ? (
+            <>
+              <ViewMain />
+              <SelectorView />
+            </>
+          ) : (
             <Continent selectedContinent={selectedContinent} navSearch={navSearch} />
-            {' '}
-          </Route>
-        )}
+
+          )}
+        </Route>
 
         <Route exact path="/Details">
           <Detail selectedCountry={selectedCountry} selectedDate={selectedDate} />

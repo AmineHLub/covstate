@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Calendar from './components/Calendar';
 import Main from './components/Main';
 
 function App() {
   const ObjOfTime = useSelector((state) => state.timeReducer);
   return (
-    <>
-      {!ObjOfTime ? <Calendar /> : <Main /> }
-    </>
+    <Router>
+      {!ObjOfTime ? <Route exact path="/"><Calendar /></Route> : <Main /> }
+    </Router>
   );
 }
 
