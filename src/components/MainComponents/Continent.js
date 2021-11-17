@@ -253,7 +253,7 @@ const Continent = ({ selectedContinent, navSearch }) => {
                 key={el}
                 exact
                 to="/Details"
-                onClick={() => dispatch(setCountry({ selected: el.toLowerCase() }))}
+                onClick={() => dispatch(setCountry({ selected: el.toLowerCase().replace(/ /g, '_') }))}
               >
                 <img
                   src={`https://raw.githubusercontent.com/djaiss/mapsicon/master/all/${key.toLowerCase()}/128.png`}
