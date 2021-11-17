@@ -47,13 +47,13 @@ const Calendar = () => {
       <div className="calendar-container d-flex">
         {errorMsg ? <p className="error-msg-date">{errorMsg}</p> : null }
         <section className="selection d-flex">
-          <select defaultValue="MM" onChange={(e) => handleMonthChange(e)}>
-            <option disabled>MM</option>
-            {arrOfMMs.map((el) => (<option key={el}>{el}</option>))}
-          </select>
           <select defaultValue="DD" onChange={(e) => handleDayChange(e)}>
             <option disabled>DD</option>
             {arrOfDDs.map((el) => (<option key={el}>{el}</option>))}
+          </select>
+          <select defaultValue="MM" onChange={(e) => handleMonthChange(e)}>
+            <option disabled>MM</option>
+            {arrOfMMs.map((el) => (<option key={el}>{el}</option>))}
           </select>
           <button type="button" className="send-btn" onClick={sendData}>Select</button>
         </section>
