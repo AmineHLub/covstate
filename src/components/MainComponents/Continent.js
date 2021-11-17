@@ -238,7 +238,7 @@ const Continent = ({ selectedContinent, navSearch }) => {
         </div>
       </div>
       <div className="lower-container">
-        <div className="stat-tag">countries</div>
+        <div className="stat-tag">{stringName}</div>
         <div className="selector-main-container d-flex">
           { countriesByName.filter((searched) => {
             if (navSearch === '') { return searched; }
