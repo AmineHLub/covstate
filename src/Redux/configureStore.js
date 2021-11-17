@@ -5,9 +5,10 @@ import totalStats from './State/totalStats';
 import timeReducer from './State/timeState';
 import continentReducer from './State/continentSelection';
 import countryReducer from './State/countrySelection';
+import countryStatsReducer from './State/countryStats';
 
 const reducer = combineReducers({
-  timeReducer, continentReducer, countryReducer, totalStats,
+  timeReducer, continentReducer, countryReducer, totalStats, countryStatsReducer,
 });
 
 const store = createStore(
