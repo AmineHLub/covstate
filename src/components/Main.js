@@ -5,7 +5,7 @@ import Navbar from './MainComponents/Navbar';
 import ViewMain from './MainComponents/ViewMain';
 import SelectorView from './MainComponents/SelectorView';
 import Continent from './MainComponents/Continent';
-import Detail from './MainComponents/Detail';
+import Detail from './Detail';
 
 const Main = () => {
   const selectedContinent = useSelector((state) => state.continentReducer);
