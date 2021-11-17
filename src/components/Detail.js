@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import '../styles/detail.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCountryStats } from '../Redux/State/countryStats';
+import loading from '../assets/loading.gif';
 
 const Detail = ({ selectedCountry, selectedDate }) => {
   let countryCases;
@@ -33,8 +34,8 @@ const Detail = ({ selectedCountry, selectedDate }) => {
     <div className="fixed-container">
       <section className="upper-country-detail">
         <div className="country-info-container d-flex">
-          <img src={selectedCountry.link} alt="country-img" />
-          <h2>{selectedCountry.correct.toUpperCase()}</h2>
+          <img className="country-img" src={selectedCountry.link} alt="country-img" />
+          <h2 className="country-name-stats">{selectedCountry.correct.toUpperCase()}</h2>
         </div>
       </section>
       { baseApiDataLink ? (
@@ -88,7 +89,26 @@ const Detail = ({ selectedCountry, selectedDate }) => {
           </section>
         </>
       )
-        : null}
+        : (
+          <section className="lower-covid-stats">
+            <div className="dates-stats">
+              <h3 className="time-indicator">
+                {selectedDate.day}
+                -
+                {selectedDate.month}
+                -2021
+              </h3>
+              <div className="stats-container d-flex">
+                <img src={loading} alt="loading-animation" />
+              </div>
+            </div>
+            <div className="dates-stats">
+              <div className="stats-container d-flex">
+                <img src={loading} alt="loading-animation" />
+              </div>
+            </div>
+          </section>
+        )}
     </div>
   );
 };

@@ -68,7 +68,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-Adobe Sparks / mapsicon shapes
+Adobe Sparks / mapsicon shapes / https://dribbble.com/BeardDesign
 
 - This project belongs to [Microverse](https://microverse.org/).
 

@@ -130,7 +130,6 @@ const Continent = ({ selectedContinent, navSearch }) => {
       IE: 'Ireland',
       IS: 'Iceland',
       HU: 'Hungary',
-      VA: 'Vatican City State',
       GR: 'Greece',
       GI: 'Gibraltar',
       DE: 'Germany',
