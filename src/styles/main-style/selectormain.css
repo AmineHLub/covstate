@@ -1,0 +1,48 @@
+.lower-container {
+  z-index: -1;
+  position: absolute;
+  top: 205px;
+  left: 0;
+  width: 100%;
+  background-color: rgb(163, 40, 40);
+}
+
+.stat-tag {
+  background-color: rgb(187, 53, 76);
+  width: 100%;
+  text-align: center;
+}
+
+.selector-main-container {
+  flex-flow: row wrap;
+}
+
+.cont-container {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-flow: column wrap;
+  height: 200px;
+  width: 50%;
+  justify-content: space-between;
+  align-items: flex-end;
+  cursor: pointer;
+  background-color: rgb(177, 48, 48);
+}
+
+.cont-container:nth-child(2n+1) {
+  background-color: rgb(184, 29, 29);
+}
+
+.cont-container:hover {
+  filter: sepia(10);
+}
+
+.cont-container > img {
+  height: 95px;
+  align-self: flex-start;
+}
+
+.cont-name {
+  margin: 0 15px 10px 0;
+}

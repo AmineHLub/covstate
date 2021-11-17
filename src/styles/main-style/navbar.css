@@ -1,0 +1,45 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: rgb(201, 40, 67);
+}
+
+.navbar-container {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.go-back {
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+  height: 100%;
+  width: 60px;
+  align-self: center;
+}
+
+.go-back > button {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.go-back:hover {
+  background-color: rgb(173, 63, 81);
+}
+
+.search-bar {
+  width: 18.3%;
+  margin-right: 5%;
+}
+
+.search-bar > input {
+  width: 100%;
+}

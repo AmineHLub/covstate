@@ -68,6 +68,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+Adobe Sparks / mapsicon shapes
+
 - This project belongs to [Microverse](https://microverse.org/).
 
 ## 📝 License
