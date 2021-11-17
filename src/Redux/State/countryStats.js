@@ -4,7 +4,7 @@ const GET_COUNTRY_STATS = 'bookStore/books/GET_COUNTRY_STATS';
 const RESET_COUNTRY_STATS = 'bookStore/books/RESET_COUNTRY_STATS';
 
 export const fetchCountryStats = (date, country) => async (dispatch) => {
-  const baseUrl = `https://api.covid19tracking.narrativa.com/api/2021-${date.day}-${date.month}/country/${country}`;
+  const baseUrl = `https://api.covid19tracking.narrativa.com/api/2021-${date.month}-${date.day}/country/${country}`;
   const response = await Axios.get(baseUrl);
   dispatch({
     type: GET_COUNTRY_STATS,
