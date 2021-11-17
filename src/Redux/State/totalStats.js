@@ -11,7 +11,7 @@ export const fetchTotal = (date) => async (dispatch) => {
   });
 };
 
-const initialState = [];
+const initialState = {};
 
 const totalReducer = (state = initialState, action) => {
   switch (action.type) {
