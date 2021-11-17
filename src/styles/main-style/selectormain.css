@@ -18,6 +18,8 @@
 }
 
 .cont-container {
+  text-decoration: none;
+  color: inherit;
   display: flex;
   flex-flow: column wrap;
   height: 200px;

@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setCountry } from '../../Redux/State/countrySelection';
 import '../../styles/main-style/viewmain.css';
 import '../../styles/main-style/selectormain.css';
 import asia from '../../assets/asia.png';
@@ -10,6 +13,7 @@ import northAmerica from '../../assets/north-america.png';
 import southAmerica from '../../assets/south-america.png';
 
 const Continent = ({ selectedContinent, navSearch }) => {
+  const dispatch = useDispatch();
   const countries = {
     africa: {
       ZW: 'Zimbabwe',
@@ -244,13 +248,19 @@ const Continent = ({ selectedContinent, navSearch }) => {
             const key = CountriesByCode
               .find((key) => countries[selectedContinent.selected][key] === el);
             return (
-              <div key={el} className="cont-container" role="presentation">
+              <NavLink
+                className="cont-container"
+                key={el}
+                exact
+                to="/Details"
+                onClick={() => dispatch(setCountry({ selected: el.toLowerCase() }))}
+              >
                 <img
                   src={`https://raw.githubusercontent.com/djaiss/mapsicon/master/all/${key.toLowerCase()}/128.png`}
                   alt="selectedContinent-shape"
                 />
                 <p className="cont-name">{el}</p>
-              </div>
+              </NavLink>
             );
           })}
         </div>

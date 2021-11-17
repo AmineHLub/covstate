@@ -1,20 +1,24 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { resetTime } from '../../Redux/State/timeState';
 import { setContinent } from '../../Redux/State/continentSelection';
+import { setCountry } from '../../Redux/State/countrySelection';
 import '../../styles/main-style/navbar.css';
 
-const Navbar = ({ selectedContinent, setNavSearch }) => {
+const Navbar = ({ selectedContinent, setNavSearch, selectedCountry }) => {
   const dispatch = useDispatch();
   return (
     <nav>
       <div className="navbar-container d-flex">
-        <div className="go-back d-flex">
+        <NavLink exact to="/" className="go-back d-flex">
           <button
             type="button"
             onClick={() => {
-              if (selectedContinent) { dispatch(setContinent(null)); } else {
+              if (selectedCountry) { dispatch(setCountry(null)); } else if (selectedContinent) {
+                dispatch(setContinent(null));
+              } else {
                 dispatch(resetTime());
               }
             }}
@@ -23,7 +27,7 @@ const Navbar = ({ selectedContinent, setNavSearch }) => {
             {'<'}
             {' '}
           </button>
-        </div>
+        </NavLink>
         <div className="user-selection">
           {' '}
         </div>
