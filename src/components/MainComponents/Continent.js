@@ -81,9 +81,7 @@ const Continent = ({ selectedContinent, navSearch }) => {
       AR: 'Argentina',
     },
     namerica: {
-      VI: 'Virgin Islands, U.S.',
       US: 'United States',
-      PR: 'Puerto Rico',
       PA: 'Panama',
       MX: 'Mexico',
       JM: 'Jamaica',
@@ -245,15 +243,17 @@ const Continent = ({ selectedContinent, navSearch }) => {
             if (searched.toLowerCase().includes(navSearch.toLowerCase())) { return searched; }
             return null;
           }).map((el) => {
+            let countryCases;
             const key = CountriesByCode
               .find((key) => countries[selectedContinent.selected][key] === el);
             return (
               <NavLink
                 className="cont-container"
-                key={el}
+                key={countryCases}
                 exact
                 to="/Details"
                 onClick={() => dispatch(setCountry({
+                  correct: el,
                   selected: el.toLowerCase().replace(/ /g, '_'),
                   link: `https://raw.githubusercontent.com/djaiss/mapsicon/master/all/${key.toLowerCase()}/128.png`,
                 }))}

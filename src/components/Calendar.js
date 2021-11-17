@@ -34,9 +34,9 @@ const Calendar = () => {
       month: `${data.getMonth() + 1}`,
     }));
   };
-  const arrOfDDs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
-    15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-  const arrOfMMs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const arrOfDDs = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14',
+    '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'];
+  const arrOfMMs = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
   return (
     <div className="main-login-container d-flex">
       <div className="logo-login">
@@ -47,11 +47,11 @@ const Calendar = () => {
       <div className="calendar-container d-flex">
         {errorMsg ? <p className="error-msg-date">{errorMsg}</p> : null }
         <section className="selection d-flex">
-          <select defaultValue="MM" onChange={(e) => handleDayChange(e)}>
+          <select defaultValue="MM" onChange={(e) => handleMonthChange(e)}>
             <option disabled>MM</option>
             {arrOfMMs.map((el) => (<option key={el}>{el}</option>))}
           </select>
-          <select defaultValue="DD" onChange={(e) => handleMonthChange(e)}>
+          <select defaultValue="DD" onChange={(e) => handleDayChange(e)}>
             <option disabled>DD</option>
             {arrOfDDs.map((el) => (<option key={el}>{el}</option>))}
           </select>
