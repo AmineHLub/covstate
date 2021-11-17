@@ -10,6 +10,7 @@ import Detail from './Detail';
 const Main = () => {
   const selectedContinent = useSelector((state) => state.continentReducer);
   const selectedCountry = useSelector((state) => state.countryReducer);
+  const selectedDate = useSelector((state) => state.timeReducer);
   const [navSearch, setNavSearch] = useState('');
   return (
     <Router>
@@ -34,7 +35,7 @@ const Main = () => {
         )}
 
         <Route exact path="/Details">
-          <Detail />
+          <Detail selectedCountry={selectedCountry} selectedDate={selectedDate} />
         </Route>
       </Switch>
     </Router>
