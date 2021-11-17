@@ -3,7 +3,6 @@ import React from 'react';
 import '../styles/detail.css';
 
 const Detail = ({ selectedCountry, selectedDate }) => {
-  console.log(selectedCountry, selectedDate);
   return (
     <div className="fixed-container">
       <section className="upper-country-detail">

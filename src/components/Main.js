@@ -1,17 +1,22 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './MainComponents/Navbar';
 import ViewMain from './MainComponents/ViewMain';
 import SelectorView from './MainComponents/SelectorView';
 import Continent from './MainComponents/Continent';
 import Detail from './Detail';
+import { fetchTotal } from '../Redux/State/totalStats';
 
 const Main = () => {
   const selectedContinent = useSelector((state) => state.continentReducer);
   const selectedCountry = useSelector((state) => state.countryReducer);
   const selectedDate = useSelector((state) => state.timeReducer);
   const [navSearch, setNavSearch] = useState('');
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchTotal(selectedDate));
+  }, []);
   return (
     <Router>
       <Navbar
