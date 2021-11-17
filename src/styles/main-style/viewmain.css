@@ -12,9 +12,18 @@
   display: grid;
   grid-template-columns: 45% 55%;
   grid-template-rows: 1fr;
-  margin: 45px 0 0 10%;
 }
 
 .view-main-container > img {
   height: 100px;
+  width: 150px;
+  margin: 35px 0 0 10%;
+}
+
+.world-stats-container {
+  margin: 20px 0 0 20%;
+}
+
+.total-stats-data {
+  font-size: 1rem;
 }

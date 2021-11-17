@@ -1,13 +1,14 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import Logger from 'redux-logger';
-import apiState from './State/apiState';
+import totalStats from './State/totalStats';
 import timeReducer from './State/timeState';
 import continentReducer from './State/continentSelection';
 import countryReducer from './State/countrySelection';
+import countryStatsReducer from './State/countryStats';
 
 const reducer = combineReducers({
-  timeReducer, continentReducer, countryReducer, apiState,
+  timeReducer, continentReducer, countryReducer, totalStats, countryStatsReducer,
 });
 
 const store = createStore(
