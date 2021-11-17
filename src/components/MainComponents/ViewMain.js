@@ -7,7 +7,11 @@ const ViewMain = () => {
     <div className="upper-container">
       <div className="view-main-container">
         <img src={worldMap} alt="map-world" />
-        <h2>Total</h2>
+        <div className="world-stats-container">
+          <h3>Cases</h3>
+          <h3>Recovered</h3>
+          <h3>Passed</h3>
+        </div>
       </div>
     </div>
   );
