@@ -28,7 +28,7 @@ const Navbar = ({ selectedContinent, setNavSearch }) => {
           {' '}
         </div>
         <div className="search-bar">
-          {selectedContinent ? <input onChange={(e) => setNavSearch(e.target.vale)} /> : null}
+          {selectedContinent ? <input onChange={(e) => setNavSearch(e.target.value)} /> : null}
         </div>
       </div>
     </nav>
