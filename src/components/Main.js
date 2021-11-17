@@ -10,7 +10,7 @@ const Main = () => {
   const [navSearch, setNavSearch] = useState('');
   return (
     <>
-      <Navbar setNavSearch={setNavSearch} />
+      <Navbar selectedContinent={selectedContinent} setNavSearch={setNavSearch} />
       {!selectedContinent ? (
         <>
           <ViewMain />

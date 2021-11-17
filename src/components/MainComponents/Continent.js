@@ -223,8 +223,8 @@ const Continent = ({ selectedContinent, navSearch }) => {
     displayImg = northAmerica;
     stringName = 'North America';
   }
-  const numberOfCountriesNow2 = Object.values(countries[selectedContinent.selected]);
-  const numberOfCountriesNow = Object.keys(countries[selectedContinent.selected]);
+  const countriesByName = Object.values(countries[selectedContinent.selected]);
+  const CountriesByCode = Object.keys(countries[selectedContinent.selected]);
   return (
     <>
       <div className="upper-container">
@@ -236,12 +236,12 @@ const Continent = ({ selectedContinent, navSearch }) => {
       <div className="lower-container">
         <div className="stat-tag">countries</div>
         <div className="selector-main-container d-flex">
-          { numberOfCountriesNow2.filter((searched) => {
+          { countriesByName.filter((searched) => {
             if (navSearch === '') { return searched; }
             if (searched.toLowerCase().includes(navSearch.toLowerCase())) { return searched; }
             return null;
           }).map((el) => {
-            const key = numberOfCountriesNow
+            const key = CountriesByCode
               .find((key) => countries[selectedContinent.selected][key] === el);
             return (
               <div key={el} className="cont-container" role="presentation">

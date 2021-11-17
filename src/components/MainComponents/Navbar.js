@@ -5,8 +5,7 @@ import { resetTime } from '../../Redux/State/timeState';
 import { setContinent } from '../../Redux/State/continentSelection';
 import '../../styles/main-style/navbar.css';
 
-const Navbar = ({ setNavSearch }) => {
-  const selectedContinent = useSelector((state) => state.continentReducer);
+const Navbar = ({ selectedContinent, setNavSearch }) => {
   const dispatch = useDispatch();
   return (
     <nav>
@@ -29,7 +28,7 @@ const Navbar = ({ setNavSearch }) => {
           {' '}
         </div>
         <div className="search-bar">
-          <input onChange={(e) => setNavSearch(e.target.value)} />
+          {selectedContinent ? <input onChange={(e) => setNavSearch(e.target.vale)} /> : null}
         </div>
       </div>
     </nav>
