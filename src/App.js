@@ -8,12 +8,9 @@ import Main from './components/Main';
 function App() {
   const ObjOfTime = useSelector((state) => state.timeReducer);
   return (
-    <>
-      <Router>
-        {!ObjOfTime ? <Route exact path="/"><Calendar /></Route> : <Main /> }
-      </Router>
-
-    </>
+    <Router>
+      {!ObjOfTime ? <Route exact path="/"><Calendar /></Route> : <Main /> }
+    </Router>
   );
 }
 

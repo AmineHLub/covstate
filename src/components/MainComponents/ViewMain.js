@@ -14,7 +14,7 @@ const ViewMain = () => {
           {totalData.total ? (
             <>
               {' '}
-              <h3 className="total-stats-data">
+              <h3 data-testid="test-cases" className="total-stats-data">
                 Cases :
                 {' '}
                 {totalData.total.today_confirmed}
