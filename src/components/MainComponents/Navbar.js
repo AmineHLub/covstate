@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { resetTime } from '../../Redux/State/timeState';
 import { setContinent } from '../../Redux/State/continentSelection';
 import { setCountry } from '../../Redux/State/countrySelection';
@@ -42,6 +42,16 @@ const Navbar = ({ selectedContinent, setNavSearch, selectedCountry }) => {
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  selectedContinent: PropTypes.shape({
+    selected: PropTypes.string,
+  }).isRequired,
+  selectedCountry: PropTypes.shape({
+    selected: PropTypes.string.isRequired,
+  }).isRequired,
+  setNavSearch: PropTypes.func.isRequired,
 };
 
 export default Navbar;

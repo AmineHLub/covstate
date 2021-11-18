@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/detail.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCountryStats } from '../Redux/State/countryStats';
@@ -115,4 +115,15 @@ const Detail = ({ selectedCountry, selectedDate }) => {
   );
 };
 
+Detail.propTypes = {
+  selectedCountry: PropTypes.shape({
+    selected: PropTypes.string.isRequired,
+    correct: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+  }).isRequired,
+  selectedDate: PropTypes.shape({
+    day: PropTypes.string.isRequired,
+    month: PropTypes.string.isRequired,
+  }).isRequired,
+};
 export default Detail;

@@ -1,13 +1,13 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Space Traveler's hub
-
+# CovState
 
 ![screenshot](./app_screenshot.png)
 ![screenshot](./app_screenshot2.png)
 ![screenshot](./app_screenshot3.png)
+![screenshot](./app_screenshot4.png)
 
-The application provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+This is a mobile web application that provides real time values of cases, recovered and passed covid patients around the world. Users at first will see the total number (all aroundn the world). they can also check for a specific country. If the list is too long users can search and filter for what they would like to choose.
 
 ## Built With
 
@@ -16,7 +16,7 @@ The application provides commercial and scientific space travel services. The ap
 
 ## Live Demo
 
-[Netlify](https://space-travel-hub-amisai.netlify.app/)
+[Netlify](https://covstate.netlify.app/)
 
 ## Getting Started
 
@@ -24,7 +24,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-- Zip archive manager if you are willing to [download](https://github.com/AmineHLub/space-travelers-hub/archive/refs/heads/dev.zip) directly from github.
+- Zip archive manager if you are willing to [download](https://github.com/AmineHLub/react-capstone-app/archive/refs/heads/dev.zip) directly from github.
 
 - Git if you are planning to clone it.
 
@@ -41,14 +41,11 @@ To get a local copy up and running follow these simple example steps.
 
 - Run npm start to have a local server running the project.
 
+### Test
+
+- Run npm test
 
 ## Authors
-
-👤 **Isaí Céspedes Sánchez**
-
-- GitHub: [@githubhandle](https://github.com/Lordkaito)
-- Twitter: [@twitterhandle](https://twitter.com/Lordkaito_)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/isai-c%C3%A9spedes-4164a51b4/)
 
 👤 **Mohamed Amine Hajltaief**
 
@@ -68,10 +65,14 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-Adobe Sparks / mapsicon shapes / https://dribbble.com/BeardDesign
-
+- Core design is [NelsonSakwa](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))'s
+- Adobe Sparks for the creation of logo.
+- Huge shoutouts to @djaiss for his [mapsicon](https://github.com/djaiss/mapsicon) repository.
+- Acknowledgment to [BeardDesign](https://dribbble.com/BeardDesign) for the loading animation
+even though I changed it abit the main core design is his.
 - This project belongs to [Microverse](https://microverse.org/).
 
 ## 📝 License
 
 - This project is [MIT](./Licenses/MIT.md) licensed.
+- [Adobe](./Licenses/ADOBE.md) personal non-commercial use.

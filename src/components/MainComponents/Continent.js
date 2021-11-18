@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setCountry } from '../../Redux/State/countrySelection';
@@ -269,6 +269,13 @@ const Continent = ({ selectedContinent, navSearch }) => {
       </div>
     </>
   );
+};
+
+Continent.propTypes = {
+  selectedContinent: PropTypes.shape({
+    selected: PropTypes.string.isRequired,
+  }).isRequired,
+  navSearch: PropTypes.string.isRequired,
 };
 
 export default Continent;

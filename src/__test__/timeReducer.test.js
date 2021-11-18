@@ -1,6 +1,5 @@
 import '@testing-library/jest-dom/extend-expect';
-import React from 'react';
-import timeReducer, { resetTime, setGlobalTime } from '../__mock__/Redux/MockedState/mockTimeState';
+import timeReducer, { setGlobalTime } from '../__mock__/Redux/MockedState/mockTimeState';
 
 const initialState = null;
 
