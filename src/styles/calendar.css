@@ -61,7 +61,12 @@ select {
   margin-right: 1rem;
   border: none;
   border-radius: 8px;
+  color: black;
   background-color: white;
+}
+
+select > option {
+  color: black;
 }
 
 select:focus {

@@ -49,6 +49,7 @@ nav {
   width: 100%;
   border: none;
   border-radius: 8px;
+  color: black;
 }
 
 .search-bar > input:focus {

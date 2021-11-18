@@ -13,7 +13,7 @@ const SelectorView = () => {
   const dispatch = useDispatch();
   return (
     <div className="lower-container">
-      <div className="stat-tag">continents</div>
+      <div className="stat-tag"><span>Continents</span></div>
       <div className="selector-main-container d-flex">
         <div className="cont-container" role="presentation" onClick={() => dispatch(setContinent({ selected: 'asia' }))}>
           <img src={asia} alt="continent-shape" />

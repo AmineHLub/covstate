@@ -9,10 +9,15 @@
 }
 
 .stat-tag {
+  text-align: center;
   background-color: #df4782;
+  height: 22px;
   width: 100%;
-  font-weight: bold;
-  font-size: 1rem;
+}
+
+.stat-tag > span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 800;
 }
 
 .selector-main-container {
@@ -50,6 +55,6 @@
 
 .cont-name {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: normal;
   margin: 0 3px 10px 0;
 }

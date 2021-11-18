@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/detail.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCountryStats } from '../Redux/State/countryStats';
 import loading from '../assets/loading.gif';
 
 const Detail = ({ selectedCountry, selectedDate }) => {
+  const [errorMsg, SetErrorMsg] = useState(`${selectedDate.day} - ${selectedDate.month}-2021`);
   let countryCases;
   if (selectedCountry.selected.includes('tates') && selectedCountry.selected.includes('ted')) {
     countryCases = 'US';
@@ -30,6 +31,10 @@ const Detail = ({ selectedCountry, selectedDate }) => {
     } else { changedCoutnryName = 'US'; }
     baseApiDataLink = fetchedCountryData.dates[`2021-${selectedDate.month}-${selectedDate.day}`].countries[changedCoutnryName];
   }
+  setTimeout(() => {
+    SetErrorMsg('If it is taking long we probably do not have data for this country');
+  },
+  2500);
   return (
     <div className="fixed-container">
       <section className="upper-country-detail">
@@ -93,10 +98,7 @@ const Detail = ({ selectedCountry, selectedDate }) => {
           <section className="lower-covid-stats">
             <div className="dates-stats">
               <h3 className="time-indicator">
-                {selectedDate.day}
-                -
-                {selectedDate.month}
-                -2021
+                {errorMsg}
               </h3>
               <div className="stats-container d-flex">
                 <img src={loading} alt="loading-animation" />
@@ -104,7 +106,7 @@ const Detail = ({ selectedCountry, selectedDate }) => {
             </div>
             <div className="dates-stats">
               <div className="stats-container d-flex">
-                <img src={loading} alt="loading-animation" />
+                <img className="loading-img" src={loading} alt="loading-animation" />
               </div>
             </div>
           </section>

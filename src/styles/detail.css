@@ -61,5 +61,6 @@
 
 .stats-container > p {
   font-size: 1.2rem;
+  font-family: 'Lato', sans-serif;
   font-weight: bold;
 }
