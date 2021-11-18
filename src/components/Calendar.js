@@ -49,10 +49,10 @@ const Calendar = () => {
           {errorMsg ? <p className="error-msg-date">{errorMsg}</p> : null }
           <section className="selection d-flex">
             <select defaultValue="DD" onChange={(e) => handleDayChange(e)}>
-              <option disabled>DD</option>
+              <option data-testid="day-selector-test" disabled>DD</option>
               {arrOfDDs.map((el) => (<option key={el}>{el}</option>))}
             </select>
-            <select defaultValue="MM" onChange={(e) => handleMonthChange(e)}>
+            <select data-testid="month-selector-test" defaultValue="MM" onChange={(e) => handleMonthChange(e)}>
               <option disabled>MM</option>
               {arrOfMMs.map((el) => (<option key={el}>{el}</option>))}
             </select>
