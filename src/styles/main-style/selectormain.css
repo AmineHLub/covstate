@@ -38,7 +38,8 @@
   border-bottom: 1px solid #94375b;
 }
 
-.cont-container:nth-child(2n+1) {
+.cont-container:nth-child(4n),
+.cont-container:nth-child(4n+1) {
   background-color: #ce4277;
 }
 
