@@ -6,7 +6,7 @@ import { fetchCountryStats } from '../Redux/State/countryStats';
 import loading from '../assets/loading.gif';
 
 const Detail = ({ selectedCountry, selectedDate }) => {
-  const [errorMsg, SetErrorMsg] = useState(`${selectedDate.day} - ${selectedDate.month}-2021`);
+  const [errorMsg, SetErrorMsg] = useState(`${selectedDate.day}-${selectedDate.month}-2021`);
   let countryCases;
   if (selectedCountry.selected.includes('tates') && selectedCountry.selected.includes('ted')) {
     countryCases = 'US';
@@ -32,7 +32,7 @@ const Detail = ({ selectedCountry, selectedDate }) => {
     baseApiDataLink = fetchedCountryData.dates[`2021-${selectedDate.month}-${selectedDate.day}`].countries[changedCoutnryName];
   }
   setTimeout(() => {
-    SetErrorMsg('If it is taking long we probably do not have data for this country');
+    SetErrorMsg('If it is taking long we probably do not have data for this country or the date is too recent');
   },
   2500);
   return (
