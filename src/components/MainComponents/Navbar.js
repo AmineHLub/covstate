@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { resetTime } from '../../Redux/State/timeState';
 import { setContinent } from '../../Redux/State/continentSelection';
 import { setCountry } from '../../Redux/State/countrySelection';
+import { resetCountryStats } from '../../Redux/State/countryStats';
 import '../../styles/main-style/navbar.css';
 
 const Navbar = ({ selectedContinent, setNavSearch, selectedCountry }) => {
@@ -16,7 +17,10 @@ const Navbar = ({ selectedContinent, setNavSearch, selectedCountry }) => {
           <button
             type="button"
             onClick={() => {
-              if (selectedCountry) { dispatch(setCountry(null)); } else if (selectedContinent) {
+              if (selectedCountry) {
+                dispatch(setCountry(null));
+                dispatch(resetCountryStats(null));
+              } else if (selectedContinent) {
                 dispatch(setContinent(null));
               } else {
                 dispatch(resetTime());

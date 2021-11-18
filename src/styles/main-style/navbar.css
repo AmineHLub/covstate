@@ -4,7 +4,7 @@ nav {
   left: 0;
   width: 100%;
   height: 2.5rem;
-  background-color: rgb(201, 40, 67);
+  background-color: #ec4c8a;
 }
 
 .navbar-container {
@@ -28,11 +28,13 @@ nav {
   width: 100%;
   height: 100%;
   background-color: inherit;
+  color: white;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 
 .go-back:hover {
-  background-color: rgb(173, 63, 81);
+  background-color: #bd3b6d;
 }
 
 .search-bar {
@@ -41,5 +43,15 @@ nav {
 }
 
 .search-bar > input {
+  height: 25px;
+  padding-left: 8%;
+  font-size: 1.15rem;
   width: 100%;
+  border: none;
+  border-radius: 8px;
+  color: black;
+}
+
+.search-bar > input:focus {
+  outline: 1px solid rgb(241, 34, 68);
 }

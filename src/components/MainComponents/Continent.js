@@ -81,9 +81,7 @@ const Continent = ({ selectedContinent, navSearch }) => {
       AR: 'Argentina',
     },
     namerica: {
-      VI: 'Virgin Islands, U.S.',
       US: 'United States',
-      PR: 'Puerto Rico',
       PA: 'Panama',
       MX: 'Mexico',
       JM: 'Jamaica',
@@ -132,7 +130,6 @@ const Continent = ({ selectedContinent, navSearch }) => {
       IE: 'Ireland',
       IS: 'Iceland',
       HU: 'Hungary',
-      VA: 'Vatican City State',
       GR: 'Greece',
       GI: 'Gibraltar',
       DE: 'Germany',
@@ -238,22 +235,24 @@ const Continent = ({ selectedContinent, navSearch }) => {
         </div>
       </div>
       <div className="lower-container">
-        <div className="stat-tag">{stringName}</div>
+        <div className="stat-tag"><span>{stringName}</span></div>
         <div className="selector-main-container d-flex">
           { countriesByName.filter((searched) => {
             if (navSearch === '') { return searched; }
             if (searched.toLowerCase().includes(navSearch.toLowerCase())) { return searched; }
             return null;
           }).map((el) => {
+            let countryCases;
             const key = CountriesByCode
               .find((key) => countries[selectedContinent.selected][key] === el);
             return (
               <NavLink
                 className="cont-container"
-                key={el}
+                key={countryCases || key}
                 exact
                 to="/Details"
                 onClick={() => dispatch(setCountry({
+                  correct: el,
                   selected: el.toLowerCase().replace(/ /g, '_'),
                   link: `https://raw.githubusercontent.com/djaiss/mapsicon/master/all/${key.toLowerCase()}/128.png`,
                 }))}

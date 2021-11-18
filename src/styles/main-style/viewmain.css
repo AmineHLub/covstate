@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 170px;
-  background-color: pink;
+  background-color: #fa5091;
   z-index: -1;
 }
 
@@ -16,14 +16,20 @@
 
 .view-main-container > img {
   height: 100px;
-  width: 150px;
   margin: 35px 0 0 10%;
+  filter: invert(28%) sepia(47%) saturate(1705%) hue-rotate(299deg) brightness(80%) contrast(88%);
+}
+
+.view-main-container > h2 {
+  margin: 35px 0 0 10%;
+  align-self: center;
 }
 
 .world-stats-container {
-  margin: 20px 0 0 20%;
+  margin: 27px 0 0 20%;
 }
 
 .total-stats-data {
   font-size: 1rem;
+  font-weight: bold;
 }

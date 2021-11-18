@@ -1,6 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;0,900;1,900&family=Roboto+Slab:wght@400;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@font-face {
+  font-family: "GillSans";
+  src:
+    url("./assets/Gill-Sans-Font-Family/Gill\ Sans.otf") format("opentype"),
+    url("./assets/Gill-Sans-Font-Family/Gill\ Sans\ Bold.otf") format("opentype");
+}
 
 .d-flex {
   display: flex;
+}
+
+* {
+  font-family: 'GillSans', sans-serif;
+  color: white;
+}
+
+.nodata {
+  position: fixed;
+  font-size: 4rem;
+  color: white;
 }
