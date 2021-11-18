@@ -15,3 +15,9 @@
   font-family: 'GillSans', sans-serif;
   color: white;
 }
+
+.nodata {
+  position: fixed;
+  font-size: 4rem;
+  color: white;
+}

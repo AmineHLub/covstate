@@ -248,7 +248,7 @@ const Continent = ({ selectedContinent, navSearch }) => {
             return (
               <NavLink
                 className="cont-container"
-                key={countryCases}
+                key={countryCases || key}
                 exact
                 to="/Details"
                 onClick={() => dispatch(setCountry({
