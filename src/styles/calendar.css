@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  background-color: #fa5091;
+}
+
+.background {
+  position: fixed;
+  z-index: -99;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.logo-login > img {
+  width: 200px;
+  justify-self: center;
+}
+
+.main-login-container,
+.calendar-container {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-login-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error-msg-date {
+  color: white;
+  font-size: 1.3rem;
+  margin: 0 0 5px 0;
+  letter-spacing: 1px;
+}
+
+.calendar-container {
+  height: 200px;
+  width: 220px;
+  border-radius: 15px;
+  background-color: #ec4c8a;
+}
+
+.selection {
+  justify-content: space-around;
+}
+
+.today-container {
+  margin-top: 20px;
+}
+
+select {
+  text-align: center;
+  margin-right: 1rem;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  background-color: white;
+}
+
+select > option {
+  color: black;
+}
+
+select:focus {
+  outline: 1px solid rgb(110, 110, 110);
+}
+
+.send-btn {
+  color: rgb(46, 46, 46);
+  font-size: 100%;
+  height: 2.3rem;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.today {
+  background-color: rgb(11, 175, 126);
+  color: whitesmoke;
+}
+
+.send-btn:hover {
+  background-color: black;
+  color: whitesmoke;
+}
